@@ -1,0 +1,117 @@
+.firstpage {
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.national-code-input {
+    width: 100%;
+    background: var(--white);
+    padding: 15px 10px;
+    border: none;
+    border-radius: 10px;
+}
+.label-condition a {
+    color: var(--blue);
+    font-weight: 700;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    display: inline-block;
+}
+.error {
+    margin: 0px 10px 20px 0;
+    color: var(--chiliRed);
+    display: block;
+}
+.submit-client{
+    min-width: 250px;
+    padding: 20px 10px;
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 19px 0 var(--lightGray);
+    border-radius: 50px;
+}
+.form-container-client{
+    width: 350px;
+    background: var(--white);
+    padding: 50px 20px;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+.input-container-client{
+    width: 100%;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    border: 1px solid var(--lightGray);
+}
+.animation-client-background{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+}
+
+@keyframes validate-animate {
+    from{
+        transform: rotate(0deg) scale(150%);
+
+    }
+    to{
+        transform: rotate(360deg) scale(100%);
+
+    }
+}
+@media screen and (max-width: 542px) {
+    .form-container-client{
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logo-client{
+        display: none;
+    }
+    .list-type1:active{
+        transform: scale(110%);
+        transition: .4s;
+        background-color: var(--orange);
+    }
+    .list-type1:hover .list-type1-child{
+        border: 3px solid var(--white);
+        transform: scale(110%);
+        transition: .4s;
+    }
+}
+@media screen and (max-width: 990px){
+    .form-container-client{
+        right: 5%;
+    }
+    .animation-client-background{
+        left: 5%;
+    }
+}
+@media screen and (max-width: 700px){
+    .form-container-client{
+        right: 0;
+    }
+    .animation-client-background{
+        display: none;
+    }
+}
